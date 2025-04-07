@@ -1,0 +1,17 @@
+<div class="product-card">
+  <img [src]="product.image" [alt]="product.name" />
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+  <p>
+    <strong>KWD {{ product.price }}</strong>
+  </p>
+  @if (product.stock) {
+  <p>In stock: {{ product.stock }}</p>
+  } @else {
+  <p class="out-of-stock">Out of Stock</p>
+  }
+  <div class="actions">
+    <button>Add to Cart</button>
+    <button [routerLink]="['/products', product.id]">View Product</button>
+  </div>
+</div>

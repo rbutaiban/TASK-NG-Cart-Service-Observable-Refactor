@@ -1,0 +1,26 @@
+@if (!!product) {
+<div class="product-detail">
+  <h2>{{ product.name }}</h2>
+  <img [src]="product.image" [alt]="product.name" />
+  <p>{{ product.description }}</p>
+  <p><strong>Price:</strong> {{ product.price }} KWD</p>
+  <p><strong>Stock:</strong> {{ product.stock }}</p>
+
+  <div class="button-group">
+    <button class="btn btn-primary">Add to Cart</button>
+    <a routerLink="/products">
+      <button class="btn btn-secondary">Back</button>
+    </a>
+  </div>
+</div>
+} @else {
+<div class="product-detail">
+  <h2>Product Not Found</h2>
+  <p>Sorry, the product you're looking for doesn't exist.</p>
+  <a routerLink="/products">
+    <button class="btn btn-primary" [routerLink]="['/products']">
+      Back to Products
+    </button>
+  </a>
+</div>
+}
