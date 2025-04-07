@@ -10,5 +10,5 @@ import { HeaderComponent } from './components/header/header.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'TASK-NG-Cart-Service';
+  title = 'TASK-NG-Cart-Service-Observable-Refactor';
 }

@@ -1,5 +1,5 @@
 {
-  "name": "task-ng-cart-service",
+  "name": "task-ng-cart-service-observable-refactor",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

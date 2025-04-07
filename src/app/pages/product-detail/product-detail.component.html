@@ -7,7 +7,13 @@
   <p><strong>Stock:</strong> {{ product.stock }}</p>
 
   <div class="button-group">
-    <button class="btn btn-primary">Add to Cart</button>
+    <button
+      class="btn btn-primary"
+      (click)="addToCart()"
+      [disabled]="!product.stock"
+    >
+      Add to Cart
+    </button>
     <a routerLink="/products">
       <button class="btn btn-secondary">Back</button>
     </a>

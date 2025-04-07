@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../../../data/products';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -11,4 +12,10 @@ import { RouterLink } from '@angular/router';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
+
+  constructor(private cartService: CartService) {}
+
+  addToCart() {
+    this.cartService.addToCart(this.product);
+  }
 }

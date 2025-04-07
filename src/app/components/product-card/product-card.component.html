@@ -11,7 +11,7 @@
   <p class="out-of-stock">Out of Stock</p>
   }
   <div class="actions">
-    <button>Add to Cart</button>
+    <button (click)="addToCart()" [disabled]="!product.stock">Add to Cart</button>
     <button [routerLink]="['/products', product.id]">View Product</button>
   </div>
 </div>
