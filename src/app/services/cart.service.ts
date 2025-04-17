@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Product } from '../../data/products';
-
+  
 export type CartItem = Product & { quantity: number };
 
 @Injectable({ providedIn: 'root' })
